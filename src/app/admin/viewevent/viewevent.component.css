@@ -1,0 +1,24 @@
+.session{
+    width:100px;
+    height: 100px;
+}
+.row{
+    margin: 20px;
+    box-shadow: 2px 2px 2px 2px;
+}
+.container{
+    height: 100vh;
+}
+.userNamePlace{
+    margin-left: 200px;
+    box-shadow: 1px 1px 1px 1px;
+    font-size: 30px;
+}
+.roundedbutton{
+    width: 50px;
+    margin-left: 20px;
+    font-size: 40px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: yellow;
+}

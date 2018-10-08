@@ -1,0 +1,113 @@
+.container
+{
+    height:70vh;
+    width:84vw;
+    margin-left: 5%; 
+    margin-top: 9%;   
+    border: solid 1px black;
+    border-radius: 7px;
+    
+    
+
+}  
+a{
+ 
+        display: inline;
+        width: 115px;
+        height: 30px;
+        background:lightblue;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+    
+}
+h1{
+    margin-left:37%;
+}
+
+    p.form-title
+{
+font-family: 'Open Sans' , sans-serif;
+font-size: 20px;
+font-weight: 600;
+text-align: center;
+color: #FFFFFF;
+margin-top: 10%;
+text-transform: uppercase;
+letter-spacing: 4px;
+}
+p{
+color:white;
+font-family: 'Carter One', cursive;
+
+}
+#title
+{
+font-family: 'Titan One', cursive;
+font-size: 40px;
+}
+#description
+{
+margin-top:5%;
+text-align:center;
+color:goldenrod;
+font-size: 28px;
+}
+a:link {
+color: green;
+text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+color: green;
+text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+color: red;
+text-decoration: none;
+}
+
+/* selected link */
+a:active {
+color: yellow;
+text-decoration: none;
+}
+
+
+
+
+
+
+svg#circle {
+height: 250px;
+width: 250px;
+}
+g circle {
+stroke-dasharray: 700;
+stroke-dashoffset: 700;
+stroke-linecap: butt;
+-webkit-transition: all 2s ease-out;
+-moz-transition: all 2s ease-out;
+-ms-transition: all 2s ease-out;
+-o-transition: all 2s ease-out;
+transition: all 2s ease-out;
+}
+g:hover circle {
+fill: none;
+stroke-dashoffset: 0;
+stroke-dasharray: 700;
+stroke-width: 5;
+}
+text {
+fill: pink;
+font-size: 16px;
+font-weight: 600;
+}
+a:hover text {
+fill: tomato;
+}

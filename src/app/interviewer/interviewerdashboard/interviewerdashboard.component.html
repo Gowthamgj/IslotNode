@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header" id="nh">
+      <h4>iSlot</h4>
+      <h4>Interviewer Dashboard</h4>
+      <div id="vertical">
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-option-vertical"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="maincontainer">
+  <div class="container">
+    <div class="events">
+      <div>
+        <h2>Recent Events</h2>
+      </div>
+      <div id="tile">
+
+      </div>
+      <div>
+        <h2>Upcoming Events</h2>        
+      </div>
+      <div class="container">
+        <div class="row">          
+            <span *ngFor="let event of upcomingevent" (click)="eventdetails(event)" >
+                <div class="col col-lg-3 tile">
+                    <h4>{{event.eventName}}</h4>
+                </div>
+            </span>
+        </div>
+    </div>
+     
+    </div>
+    <div id="scoreboard">
+      <div id="point">
+        <div class="glyphicon glyphicon-flash" id="icon"></div>
+        <div>
+          <h2>Points so far</h2>
+        </div>
+      </div>
+      <div id="nt">
+        <div>Total</div>
+        <div>This month</div>
+      </div>
+      <div id="nu">
+        <div>197</div>
+        <div>23</div>
+      </div>
+    </div>
+  </div>
+</div>

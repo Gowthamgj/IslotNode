@@ -1,0 +1,36 @@
+<div className="main-containere" id="main-con">
+  
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" >iSlot</a>
+      </div>
+      <ul class="nav navbar-nav">
+        </ul>
+      </div>
+    </nav>
+  <div id="slot1"  *ngFor="let slot of slotDetails">
+      <div class="col-lg-3" >
+          <h3> {{slot.startTime}}-{{slot.endTime}}</h3>
+      </div>
+      <div class="col-lg-3">
+      <input type="text" class="form-control" id="box" readonly value={{slot.noOfInterviewersEnrolled.length}}>
+      </div>
+      <div class="col-lg-3" id="toggleid">
+          <label class="switch">    
+              <input type="checkbox" (change)="toggle($event,slot.id)">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div class="col-lg-3" id="tit" >
+          <label for="totalInterviews"> Total Interviews Taken </label>
+          <input type="text" class="form-control" name="totalInterviews" >
+      </div>
+  </div>
+  <br >
+  
+  <br >
+
+  <button type="button" class="btn btn-success" id="update">Update</button>
+
+</div>

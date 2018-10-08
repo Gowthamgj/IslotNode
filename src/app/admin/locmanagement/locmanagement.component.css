@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+
+}
+.home{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.componame{
+    font-size: 30px;
+    margin-left: 30%;
+}
+.icon{
+    font-size: 30px;
+    margin-left: 40%;
+}
+.delete{
+    float: right;
+}
+.tiles{
+    box-shadow: 2px 2px 2px 2px;
+   margin: 20px;
+   height: 40px;
+}
+p{
+    display: inline-block;
+}
+

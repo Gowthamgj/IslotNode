@@ -1,0 +1,34 @@
+<div>
+<form [formGroup]="login" #formData='ngForm'(ngSubmit)="onSubmit(formData)" >
+<div class='container' >
+<br>
+<br>
+<label >Username or email</label>
+<div class="inner-addon left-addon ">
+<i class="glyphicon glyphicon-user"></i>
+
+    <input type="text"class="form-control" ng-model="email" id="email" formControlName="email">
+    <div  class="alert alert-danger" *ngIf="login.get('email').touched && login.get('email').errors ">Please enter email address</div>
+
+
+</div>        
+
+<label >Password</label>
+
+<div class="inner-addon left-addon">
+<i class="glyphicon glyphicon-lock"></i>            
+<input type="password"class="form-control"  ng-model="password" id="password" formControlName="password">
+    <div  class="alert alert-danger" *ngIf="login.get('password').touched && login.get('password').errors ">Please enter password</div>
+</div>
+<br><br>
+
+<div>
+    <button type="submit" class="btn btn-success" id="submitting" [disabled]="login.invalid" >submit</button>
+</div>
+<br>
+<br>
+
+</div>
+</form>
+</div>
+

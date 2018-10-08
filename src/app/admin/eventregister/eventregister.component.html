@@ -1,0 +1,74 @@
+<h1 class="text-center">Event registration</h1>
+<div class="container">
+  <form class="form-group" [formGroup]="eventregister" #formData='ngForm' (ngSubmit)="onSubmit(formData)"  >
+    <div>
+      <label for="eventname">Name</label>
+      <input type="text" class="form-control" (ngModel)="eventname"formControlName="eventname" > 
+      <div  *ngIf="eventname.touched && eventname.invalid">
+        <div class="alert alert-danger" *ngIf="eventname.errors.required">
+          event name is required
+        </div>
+        <div class="alert alert-danger" *ngIf="eventname.errors.maxlength">
+          Event name maximum consist of {{eventname.errors?.maxlength.requiredLength}} letters
+        </div>
+        <div class="alert alert-danger" *ngIf="eventname.errors.minlength">
+            Event name minimum consist of {{eventname.errors?.minlength.requiredLength}} letters          
+        </div>
+      </div>   
+    </div>
+    <div>
+      <label for="eventdate">Date</label>
+      <input type="date" class="form-control" value=#todaydate  formControlName="eventdate">
+      <div  *ngIf="eventdate.touched && eventdate.invalid">
+        <div class="alert alert-danger" *ngIf="eventdate.errors?.datevalidate">
+          Event date must be a future one
+        </div>
+      </div>
+    </div>
+    
+    
+    <span [formGroup]="eventregister.get('timecheck')">
+      <div>
+        <label for="starttime">Start Time</label>
+        <input type="time" class="form-control" (ngModel)="starttime" formControlName="starttime">
+        <div *ngIf="eventregister.invalid && starttime.touched && endtime.touched">
+            <div class="alert alert-danger" *ngIf="starttime.errors?.required">
+              starttime is required 
+            </div>
+            <div class="alert alert-danger" *ngIf="timecheck.errors?.invalidatedate">
+              starttime should be less than end time 
+            </div>
+        </div>
+      </div>
+      <div>
+        <label for="endtime">End Time</label>
+        <input type="time" class="form-control" (ngModel)="endtime" formControlName="endtime">
+        <div *ngIf="eventregister.invalid && starttime.touched && endtime.touched">
+          <div class="alert alert-danger" *ngIf="endtime.errors?.required">
+            endtime is required
+          </div>
+            <div class="alert alert-danger" *ngIf="timecheck.errors?.invalidatedate">
+              starttime should be less than end time 
+            </div>
+        </div>
+      </div>
+    </span>
+    <div>
+      <label for="location">location</label>
+      <!-- <select class="js-example-basic-multiple"  multiple="multiple">
+          <option   *ngFor="let city of location">{{city}}</option>
+        </select> -->
+      <select class="form-control" name="location" (ngModel)="location" formControlName="location" multiple>
+        <option *ngFor="let city of location" >{{city}}</option>
+      </select>      
+    </div>
+    <div>
+        <label for="location">skill</label>
+        <select class="form-control" name="skill" (ngModel)="skills" multiple>
+          <option *ngFor="let skill of skills" >{{skill}}</option>
+        </select>      
+    </div>
+    <button class="btn btn-lg btn-warning" (click)="checkform()">Reset</button>
+    <button class="btn btn-lg btn-success" [disabled]="eventregister.invalid">create event</button>
+  </form>
+</div>

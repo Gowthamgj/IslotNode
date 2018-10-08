@@ -1,0 +1,60 @@
+
+.home{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.componame{
+    font-size: 30px;
+    margin-left: 30%;
+}
+.icon{
+    font-size: 30px;
+    margin-left: 48%;
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+#addicon
+{
+    float:right;
+    margin-right:10%;
+    font-size: 40px;
+}
+h4{
+    margin-left:7%;
+}
+h5{
+    margin-left: 30px;
+    font-size:20px;
+    float: left;
+}
+row{
+    width: 100px;
+    height: 200px;
+}
+.tiles{
+    box-shadow: 2px 2px 2px 2px;
+    margin: 20px;
+    height: 40px;
+}
+.dropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    margin-left: 87%;    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius:5%; 
+}
+.dropdown-content>a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}

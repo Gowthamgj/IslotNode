@@ -1,0 +1,12 @@
+<div class="row" *ngFor="let eve of slotdata">
+  <div class="col-lg-4 session" >
+    <h5>{{eve.startTime}}to{{eve.endTime}}</h5>
+  </div>
+  <div class="col-lg-4 userNamePlace">
+    <i class="glyphicon glyphicon-user" *ngFor="let user of eve.noOfInterviewersEnrolled"></i>
+      {{user?.userid}}
+  </div>
+  <div class="col-lg-4">
+    <span class="roundedbutton">&nbsp;&nbsp;&nbsp;{{eve.noOfInterviewersEnrolled[0].noOfInterviewsTaken}}&nbsp;&nbsp;&nbsp;</span>
+  </div>
+</div>

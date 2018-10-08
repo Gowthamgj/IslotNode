@@ -1,0 +1,66 @@
+<nav class="navbar navbar-light bg-light">
+        <div class="header">
+           <a routerLink="" class="home">HD</a>
+          <span class="componame">{{title}}</span>
+          
+          <span class="glyphicon glyphicon-option-vertical icon" (click)="toggle();"></span>
+          
+          <div id="myDropdown" class="dropdown-content" *ngIf="dropdown">
+              <a routerLink="/../adminregistration"  (click)="updateProfile()">Update Profile</a>
+              <a routerLink="/skillmanagement">Skill Management</a>
+              <a routerLink="/locmanagement">Location Managment</a> 
+              <a href="#contact">Change Password</a> 
+              <a href="#contact">Logout</a> 
+              
+
+            </div>
+            <!-- <div id="myDropdown" class="dropdown-content">
+                <span>home</span>
+                <span>home</span>
+                <span>home</span>
+            </div> -->
+
+        </div>
+      </nav>
+<div>
+    <br>
+    <div>
+        <h5>
+            <b> Recent Events</b>
+        </h5>
+        <br>
+        <br>
+        <a routerLink="/admin/createevent"><i class='glyphicon glyphicon-plus-sign' id='addicon'></i></a>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <span *ngFor="let event of recentevents"  (click)="details(event)">
+                <a><div class="col col-lg-3 tiles" [style.color]="event.isClosed=='true' ? 'red' : 'black'">
+                    <h4>{{event.eventName}}</h4>
+                </div>
+                </a>
+            </span>
+        </div>
+    </div>
+
+
+    <div>
+        <h5>
+            <b> upcoming events</b>
+        </h5>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <span *ngFor="let event of upcomingevents">
+                <div class="col col-lg-3 tiles">
+                    <h4>{{event.eventName}}</h4>
+                </div>
+            </span>
+        </div>
+    </div>
+
+</div>
+

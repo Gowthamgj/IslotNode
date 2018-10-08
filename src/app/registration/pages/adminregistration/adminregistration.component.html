@@ -1,0 +1,62 @@
+<h3 class="text-center">Admin Registration</h3>
+<div class="container">
+<form [formGroup]= "id" id="data" #formData='ngForm'(ngSubmit)="onSubmit(formData)" >
+  
+<div class="form-group" >
+    <label for="name" >Name</label>
+    <input type="text"  id="name"  (ngModel)="name" formControlName="name" class="form-control" >
+ <span class="span-for-errors"  *ngIf="id.get('name').touched && id.get('name').errors">Please enter name</span>
+  </div>
+  
+  <div class="form-group">
+      <label for="mail">E-mail</label>
+      <input type="text" id="name"  (ngModel)="mail"  formControlName="mail" class="form-control">
+      <span class="span-for-errors"  *ngIf="id.get('mail').touched && id.get('mail').errors">Please enter email</span>
+    </div>
+
+    
+
+<!-- <div [formGroup]="id.get(pswdmatch)">
+    <div class="form-group">
+      <label for="pswd" >Password</label>
+      <input type="text"  id="pswd" formControlName="pwd" class="form-control">
+   <span class="span-for-errors"  *ngIf="id.get('pwd').touched && id.get('pwd').errors">Please enter password</span>
+    </div>
+  
+    <div class="form-group">
+      <label for="cnfmpswd" >Confirm Password</label>
+      <input type="text"  id="cnfmpswd" formControlName="cnfmpwd" class="form-control">
+   <span class="span-for-errors"  *ngIf="id.get('cnfmpwd').touched && id.get('cnfmpwd').errors.pwdnotmatch">Please enter name</span>
+    </div>
+</div> -->
+
+<div class="form-group">
+    <label for="pswd" >Password</label>
+    <input type="password"  id="pswd" (ngModel)="pwd" formControlName="pwd" class="form-control">
+ <span class="span-for-errors"  *ngIf="id.get('pwd').touched && id.get('pwd').errors">Please enter password</span>
+  </div>
+
+    <div class="form-group">
+        <label for="mobile" >Mobile no</label>
+        <input type="text" id="name" (ngModel)="mobileno" formControlName="mobileno" class="form-control">
+        <span class="span-for-errors" *ngIf="id.get('mobileno').touched && id.get('mobileno').errors">Please enter mobile no</span>
+      </div>
+      <div class="form-group">
+          <label for="location" >Location</label>
+         <!-- <ul  id="location"  formControlName="loc" >
+          <li *ngFor="let city of list">{{city.name}}</li>
+          </ul>  -->
+          <select id="location" (ngModel)="loc" formControlName="loc">
+      <option value="none">None</option>
+      <option *ngFor="let city of list"
+              [value]="city">{{city}}
+      </option>
+    </select>
+   <span class="span-for-errors" *ngIf="id.get('loc').touched && id.get('loc').errors">Please select location</span>
+        </div>
+        <div id="btn" class="text-center">
+          <button type="button" class="btn" (click)="clear()">Cancel</button>
+          <button type="submit" class="btn btn-success" [disabled]="id.invalid" >Register</button>
+          </div>
+        </form>
+          </div>

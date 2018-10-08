@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="header">
+       <a routerLink="" class="home">HD</a>
+      <span class="componame">Location Management</span>
+      <span class="glyphicon glyphicon-option-vertical icon"></span>
+    </div>
+  </nav>
+  <div class="container"  [formGroup]="locationValid">
+      <input type="text" class="form-control" formControlName="box" [(ngModel)]="locationBox" (keyup.enter)="onEnter()" placeholder="Add  new location"> 
+      <div class="alert alert-danger" *ngIf="invalid">city name already exist</div>
+      <div class="row">
+        <br><br>
+        <div class= "col col-lg-3 tiles" *ngFor="let loc of locationList">
+          <span class="glyphicon glyphicon-trash delete" (click)="deleteLocation(loc)"></span>
+          <p contenteditable="true">{{loc}}</p>
+        </div>
+      </div>   
+      
+  </div>

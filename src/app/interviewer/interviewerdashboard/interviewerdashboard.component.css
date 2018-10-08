@@ -1,0 +1,61 @@
+.container{
+    display: inline-flex;
+
+}
+#nh,#nt,#nu{
+    display : inline-flex;
+    justify-content: space-evenly
+}
+#tile{
+    width : 100px;
+    height : 100px;
+    border-color : black;
+    border-style: solid;
+    border-width: 2px;
+    /* box-shadow : 0px 0px 10px grey; */
+    /* box-border:black; */
+
+}
+#scoreboard{
+    width : 400px;
+    height : 400px;
+    margin-left : 483px;
+    display: inline-grid;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 60px;
+}
+.events{
+    margin-top:15px;
+}
+#point{
+    margin-top: 45px;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+#icon{
+    margin-top: 14px;
+}
+#vertical{
+    margin-left: 1013px;
+}
+
+.glyphicon.glyphicon-flash {
+    font-size: 50px;
+}
+ .maincontainer{
+    
+     margin-left: 76px;
+     width:1200px;
+     height:550px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+} 
+.tile{
+    box-shadow: 2px 2px 2px 2px;
+    margin: 20px;
+    width:150px;
+    height: 40px;
+}

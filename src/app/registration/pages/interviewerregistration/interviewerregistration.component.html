@@ -1,0 +1,42 @@
+<h3 class="text-center">Interviewer Registration</h3>
+<div class="container">
+<form [formGroup]= "id" id="data" #formData='ngForm'(ngSubmit)="onSubmit(formData)" >
+  
+<div class="form-group">
+    <label for="name" >Name</label>
+    <input type="text"  id="name" (ngModel)="name"formControlName="name" class="form-control">
+ <span class="span-for-errors"  *ngIf="id.get('name').touched && id.get('name').errors">Please enter your name</span>
+  </div>
+  
+  <div class="form-group">
+      <label for="mail">E-mail</label>
+      <input type="text" id="name"  (ngModel)="mail" formControlName="mail" class="form-control">
+      <span class="span-for-errors"  *ngIf="id.get('mail').touched && id.get('mail').errors">Forex: ilakkiyas@virtusa.com </span>
+    </div>
+    <div class="form-group">
+      <label for="mobile" >Mobile no</label>
+      <input type="text" id="name" (ngModel)="mobileno" formControlName="mobileno" class="form-control">
+      <span class="span-for-errors" *ngIf="id.get('mobileno').touched && id.get('mobileno').errors">Enter Valid Mobile Number</span>
+    </div>
+<div class="form-group">
+    <label for="pswd" >Password</label>
+    <input type="password"  id="pswd" (ngModel)="pwd" formControlName="pwd" (ngModel)="password" class="form-control">
+ <span class="span-for-errors"  *ngIf="id.get('pwd').touched && id.get('pwd').errors">Please enter your password</span>
+  </div>
+
+    
+      <div class="form-group">
+          <label for="skill" >Skills</label>
+          <select id="skill" multiple (ngModel)="skill" formControlName="skill">
+      
+      <option *ngFor="let skillname of list">{{skillname}}
+      </option>
+    </select>
+   <span class="span-for-errors" *ngIf="id.get('skill').touched && id.get('skill').errors">Please select Skillname</span>
+        </div>
+        <div id="btn" class="text-center">
+          <button type="button" class="btn" (click)="clear()">Clear</button>
+          <button type="submit" class="btn btn-success" [disabled]="id.invalid" >Register</button>
+          </div>
+        </form>
+          </div>

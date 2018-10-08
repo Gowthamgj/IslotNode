@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+
+}
+.home{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.componame{
+    font-size: 30px;
+    margin-left: 30%;
+}
+.icon{
+    font-size: 30px;
+    margin-left: 40%;
+}
+.container-fluid{
+border: 2px solid black;
+margin: 10px;
+}
+#buttonjoin{
+    margin-left: 50px;
+}
